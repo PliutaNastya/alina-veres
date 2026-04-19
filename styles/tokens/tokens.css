@@ -1,0 +1,106 @@
+:root {
+	interpolate-size: allow-keywords;
+
+	/* Typography */
+
+	/* Font-family */
+	--font-family-serif: "Noto Serif", serif;
+	--font-family-sans-serif: "Manrope", sans-serif;
+
+	/* Sizes */
+	--text-sm: 0.875rem;
+	--text-base: 1rem;
+	--text-lg: 1.25rem;
+	--text-xl: 1.75rem;
+
+	/* Line-height */
+	--line-height-tight: 1.2;
+	--line-height-normal: 1.4;
+
+	/* Colors */
+
+	/* Text */
+	--text-primary: light-dark(#4a3728, #f5f0e8);
+	--text-secondary: light-dark(#8b7355, #cbbba0);
+	--text-muted: light-dark(#a08c76, #8a7a6a);
+	--text-inverse: light-dark(#f5f0e8, #4a3728);
+
+	/* Links */
+	--link-primary: var(--accent-primary);
+	--link-hover: color-mix(in oklab, var(--accent-primary) 80%, white);
+
+	/* Accent */
+	--accent-primary: #8b7355;
+	--accent-secondary: #6b8e5a;
+	--accent-tertiary: #4a3728;
+
+	--accent-danger: #b86f52;
+	--accent-success: #6b8e5a;
+
+	--text-on-accent: #fff;
+
+	/* Buttons */
+	--button-bg: light-dark(#8b7355, #e8d5b7);
+	--button-text: light-dark(#fff, #1c1510);
+
+	--button-hover-bg: color-mix(in oklab, var(--button-bg) 85%, black);
+	--button-hover-mix-base: 80%;
+	--button-hover-mix-highlight: 10%;
+
+	/* Focus */
+	--outline-color: light-dark(#6b8e5a, #e8d5b7);
+	--outline-width: 3px;
+	--outline-offset: 2px;
+
+	/* Gradient */
+	--gradient-primary: linear-gradient(135deg, #e8d5b7, #8b7355);
+	--gradient-organic: radial-gradient(circle at 30% 30%, #e8d5b7, transparent 70%);
+
+	/* Spacing Scale */
+	--spacing-xs: 2px;
+	--spacing-sm: 4px;
+	--spacing-md: 8px;
+	--spacing-lg: 16px;
+	--spacing-xl: 32px;
+
+	/* Radius*/
+	--radius-sm: var(--spacing-sm);
+	--radius-md: var(--spacing-md);
+	--radius-lg: var(--spacing-lg);
+	--radius-round: 50%;
+
+	/* Border */
+	--border-width: 1px;
+	--border-width-emphasis: 2px;
+	--border-color: light-dark(#e0d6c8, #3a2e25);
+
+	/* Surface */
+	--surface-primary: light-dark(#f5f0e8, #211a15);
+	--surface-raised: light-dark(#e8d5b7, #2a211a);
+	--surface-hover: light-dark(rgba(139, 115, 85, 0.1), rgba(255, 255, 255, 0.08));
+	--surface-overlay: rgba(28, 21, 16, 0.6);
+
+	/* Glass/Overlay */
+	--glass-bg: color-mix(in oklab, var(--surface-raised) 70%, transparent);
+	--glass-blur: blur(10px);
+
+	/* Image */
+	--image-radius: var(--radius-lg);
+	--image-hover-scale: 1.03;
+	--image-overlay: rgba(0, 0, 0, 0.2);
+
+	/* Shadow */
+	--shadow-sm: 0 1px 3px light-dark(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.4));
+	--shadow-md: 0 4px 12px light-dark(rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.6));
+
+	/* Form Control */
+	--form-control-background: color-mix(in oklab, var(--surface-raised) 90%, white);
+
+	--form-control-border: var(--border-color);
+	--form-control-focus: var(--outline-color);
+
+	/* Interaction */
+	--interactive-hover-opacity: 0.8;
+	--interactive-active-scale: 0.97;
+	--interactive-focus-ring: 0 0 0 3px var(--outline-color);
+}

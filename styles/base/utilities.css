@@ -1,0 +1,35 @@
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
+}
+
+[class*="__container"] {
+	max-width: 76.875rem;
+	width: 100%;
+	margin-inline: auto;
+	padding-inline: 0.9375rem;
+}
+
+/* .overflow-scroller {
+    grid-column: full-width;
+    overflow-x: auto;
+    display: grid;
+    gap: var(--space-s);
+    align-items: start;
+    grid-auto-flow: column;
+    grid-auto-columns: max(200px,30%);
+    scroll-snap-align: center;
+    scroll-snap-type: x mandatory
+}
+
+.overflow-scroller>* {
+    scroll-snap-align: center
+} */
+

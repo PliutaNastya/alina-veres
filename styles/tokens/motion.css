@@ -1,0 +1,13 @@
+:root {
+	/* Motion  */
+	--motion-duration-fast: 0.2s;
+	--motion-duration-slow: 0.5s;
+	--motion-duration-ultra: 0.8s;
+
+	--motion-ease-out: ease-out;
+	--motion-ease-in: ease-in;
+	--motion-ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+
+	/* Reduce */
+  --motion-duration-reduce: 0.01ms;
+}
