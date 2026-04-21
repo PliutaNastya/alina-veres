@@ -16,4 +16,11 @@ body {
 	transition:
 		background-color var(--motion-duration-slow),
 		color var(--motion-duration-slow);
+
+		:has(input[name="menu-toggle"]:checked) & {
+			overflow: hidden;
+		}
+}
+.wrapper {
+	overflow: clip;
 }
