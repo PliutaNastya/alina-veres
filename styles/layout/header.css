@@ -11,11 +11,11 @@
 	translate: 0 0;
 	transition: background-color var(--motion-duration-slow), translate var(--motion-duration-slow);
 
-	@media (width >= 40.625em) {
+	/* @media (width >= 40.625em) { */
 		@container scroll-state(scrolled: bottom) {
 			translate: 0 calc(-100% - 1px);
 		}
-	}
+	/* } */
 	/* @media (width >= 40.625em) { */
 	/* container-type: scroll-state; */
 	/* inset-block-start: var(--scroll-distance-slide-back-in); */
