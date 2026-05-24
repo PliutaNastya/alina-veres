@@ -3,7 +3,6 @@
 	position: sticky;
 	inset-block-start: 0;
 	z-index: 50;
-	margin: 0px 15px;
 
 	@media (width >= 40.625em) {
 		container-type: scroll-state;
@@ -47,6 +46,7 @@
 
 	@media (width < 40.625em) {
 		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto auto;
 	}
 }
 .header__logo {
@@ -62,40 +62,13 @@
 
 	@media (width < 40.625em) {
 		width: 5rem;
+		grid-column: 1 / 2;
 	}
 }
 .header__nav {
 	@media (width < 40.625em) {
-		position: fixed;
-		top: 0;
-		right: -100%;
-		width: 100%;
-		height: 100%;
-		overflow: auto;
-		padding: 7.5rem 0.9375rem 1.875rem;
-		background-color: var(--surface-primary);
-		transition: right var(--motion-duration-fast) var(--motion-ease-out);
-
-		&::before {
-			content: "";
-			width: 100%;
-			height: 4.25rem;
-			position: fixed;
-			top: 0;
-			right: -100%;
-			background-color: var(--surface-primary);
-			transition: right var(--motion-duration-fast) var(--motion-ease-out);
-			z-index: 4;
-			pointer-events: none;
-		}
-
-		:has(input[name="menu-toggle"]:checked) & {
-			right: 0;
-
-			&::before {
-				right: 0;
-			}
-		}
+		grid-column: 1 / -1;
+		grid-row: 2 / 3;
 	}
 }
 .menu {
@@ -104,12 +77,6 @@
 	justify-content: center;
 	flex-wrap: wrap;
 	row-gap: 0.3125rem;
-
-	@media (width < 40.625em) {
-		flex-direction: column;
-		row-gap: 2.5rem;
-		align-items: flex-end;
-	}
 }
 .menu__link {
 	padding: 0.625rem 0.9375rem;
@@ -123,7 +90,7 @@
 	transition: color 0.3s ease;
 
 	@media (width < 40.625em) {
-		font-size: var(--text-lg);
+		padding: 0.3125rem 0.5rem;
 	}
 }
 .header__actions {
@@ -181,6 +148,10 @@
 		z-index: 2;
 		line-height: 1;
 		cursor: pointer;
+	}
+
+	@media (width < 40.625em) {
+		grid-column: 2 / 3;
 	}
 }
 
@@ -256,50 +227,5 @@
 .menu-icon {
 	@media (width >= 40.625em) {
 		display: none;
-	}
-}
-
-.menu-icon {
-	position: relative;
-	z-index: 5;
-	width: 1.875rem;
-	height: 1.125rem;
-	cursor: pointer;
-
-	span {
-		position: absolute;
-		width: 100%;
-		height: 0.125rem;
-		left: 0;
-		display: block;
-		background: var(--text-primary);
-		transition: rotate var(--motion-duration-slow);
-
-		&:first-child {
-			top: 0rem;
-
-			:has(input[name="menu-toggle"]:checked) & {
-				top: 50%;
-				rotate: 405deg;
-			}
-		}
-		&:nth-child(2) {
-			top: 50%;
-			translate: 0 -50%;
-			transition: opacity var(--motion-duration-slow);
-
-			:has(input[name="menu-toggle"]:checked) & {
-				top: 50%;
-				opacity: 0;
-			}
-		}
-		&:nth-child(3) {
-			top: 100%;
-
-			:has(input[name="menu-toggle"]:checked) & {
-				top: 50%;
-				rotate: -405deg;
-			}
-		}
 	}
 }
