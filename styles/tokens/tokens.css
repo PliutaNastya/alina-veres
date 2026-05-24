@@ -1,3 +1,6 @@
+html {
+	container-type: scroll-state;
+}
 :root {
 	scroll-behavior: smooth;
 	interpolate-size: allow-keywords;

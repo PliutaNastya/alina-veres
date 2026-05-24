@@ -1,13 +1,25 @@
 .header {
-	--scroll-distance-slide-back-in: -12.5rem;
-	position: sticky;
-	inset-block-start: 0;
+	/* --scroll-distance-slide-back-in: -12.5rem; */
+	/* position: sticky; */
+	/* width: 100%; */
+	/* inset-block-start: 0; */
+	position: fixed;
+	inset: 0 0 auto;
+	background-color: var(--surface-primary);
+	
 	z-index: 50;
+	translate: 0 0;
+	transition: background-color var(--motion-duration-slow), translate var(--motion-duration-slow);
 
 	@media (width >= 40.625em) {
-		container-type: scroll-state;
-		inset-block-start: var(--scroll-distance-slide-back-in);
-		@container scroll-state(stuck: top) {
+		@container scroll-state(scrolled: bottom) {
+			translate: 0 calc(-100% - 1px);
+		}
+	}
+	/* @media (width >= 40.625em) { */
+	/* container-type: scroll-state; */
+	/* inset-block-start: var(--scroll-distance-slide-back-in); */
+	/* @container scroll-state(stuck: top) {
 			.header__container {
 				background-color: var(--surface-primary);
 				translate: 0 13.75rem;
@@ -25,8 +37,8 @@
 					inset-block-start: calc(anchor(bottom) + 0.625rem);
 				}
 			}
-		}
-	}
+		}  */
+	/* } */
 }
 .header__container {
 	display: grid;
@@ -41,7 +53,7 @@
 
 	transition:
 		border-radius 4s,
-		background-color 0.4s,
+		background-color var(--motion-duration-slow),
 		translate 1s;
 
 	@media (width < 40.625em) {
@@ -56,7 +68,7 @@
 	font-weight: 700;
 	font-family: var(--font-family-serif);
 	font-size: var(--text-lg);
-		
+
 	position: relative;
 	z-index: 5;
 

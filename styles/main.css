@@ -28,3 +28,6 @@ body {
 section {
 	scroll-margin-top: clamp(75px, 100vw, 125px);
 }
+main {
+	
+}
