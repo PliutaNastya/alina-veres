@@ -1,0 +1,38 @@
+.quote {
+	display: grid;
+	place-content: center;
+
+	background: repeating-conic-gradient(var(--gradient-color-primary) 0 12.5%, var(--gradient-color-secondary) 0 25%) 0 / 500px 500px;
+}
+.quote__container {
+	display: grid;
+	place-items: center;
+	text-align: center;
+	svg {
+		width: 48px;
+		height: 48px;
+		color: var(--accent-primary);
+	}
+}
+.quote__body {
+	width: min(100%, 50rem);
+	margin-inline: auto;
+	h2 {
+		font-size: var(--heading-lg);
+		font-weight: 700;
+		font-family: var(--font-family-serif);
+
+		@media (width < 48em) {
+			font-size: var(--heading-md);
+		}
+
+		&:not(:last-child) {
+			margin-block-end: var(--spacing-xl);
+		}
+	}
+	.quote__author {
+		letter-spacing: 0.3rem;
+		font-style: normal;
+		font-size: var(--text-s);
+	}
+}

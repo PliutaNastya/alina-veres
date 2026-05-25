@@ -11,4 +11,8 @@
   <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" id="chevron-right">
     <path fill="currentColor" d="m3.825 9 5.6 5.6L8 16 0 8l8-8 1.425 1.4-5.6 5.6H16v2z"/>
   </symbol>
+
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" id="quote">
+    <path fill="currentColor" d="M2.55 18 6 12q-2.475 0-4.237-1.762T0 6t1.763-4.237T6 0t4.238 1.763T12 6q0 .862-.206 1.594A5.6 5.6 0 0 1 11.175 9L6 18zm13.5 0 3.45-6q-2.474 0-4.238-1.762Q13.502 8.475 13.5 6q0-2.475 1.762-4.237T19.5 0t4.238 1.763T25.5 6q0 .862-.206 1.594A5.6 5.6 0 0 1 24.675 9L19.5 18z"/>
+  </symbol>
 </svg>

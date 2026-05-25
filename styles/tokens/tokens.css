@@ -88,6 +88,8 @@ html {
 	--surface-raised: light-dark(#e8d5b7, #2a211a);
 	--surface-hover: light-dark(rgba(139, 115, 85, 0.1), rgba(255, 255, 255, 0.08));
 	--surface-overlay: rgba(28, 21, 16, 0.6);
+	--gradient-color-primary: light-dark(#f5f0e834, #211a1565);
+	--gradient-color-secondary: light-dark(#6b8e5a10, #4a37281d);
 
 	/* Glass/Overlay */
 	--glass-bg: color-mix(in oklab, var(--surface-raised) 70%, transparent);
