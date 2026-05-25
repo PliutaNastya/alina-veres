@@ -1,0 +1,14 @@
+.work {
+	align-content: center;
+	.work__container {
+		anchor-name: --carousel;
+
+		& .heading-block {
+			padding-inline-end: clamp(90px, 20vw, 116px);
+		}
+
+		&:not(:last-child) {
+			margin-bottom: calc(var(--spacing-lg) * 2);
+		}
+	}
+}

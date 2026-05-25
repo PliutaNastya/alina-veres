@@ -12,10 +12,15 @@ html {
 	--font-family-sans-serif: "Manrope", sans-serif;
 
 	/* Sizes */
+	--text-s: 0.75rem;
 	--text-sm: 0.875rem;
 	--text-base: 1rem;
 	--text-lg: 1.25rem;
 	--text-xl: 1.75rem;
+
+	--heading-s: 1.5rem;
+	--heading-md: 2.75rem;
+	--heading-lg: 3.75rem;
 
 	/* Line-height */
 	--line-height-tight: 1.2;

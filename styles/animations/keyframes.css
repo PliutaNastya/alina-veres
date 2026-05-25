@@ -24,3 +24,12 @@
         opacity: 1
     }
 }
+
+@keyframes scroll {
+	0%, 100% {
+		background: linear-gradient(to bottom, var(--text-primary), transparent);
+	}
+	50% {
+		background: linear-gradient(to bottom, transparent, var(--text-primary));
+	}
+}

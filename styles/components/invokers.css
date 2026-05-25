@@ -1,0 +1,36 @@
+/**
+ * Invoker Command API - Functional Structure
+ * 
+ * Demonstrates the command/commandfor pattern for dialogs and popovers.
+ * This is the mechanism layer - how invokers work.
+ */
+@layer structure {
+
+  /* Dialog invoker pattern */
+  [commandfor] {
+    cursor: pointer;
+  }
+
+  dialog {
+    margin: auto;
+    overscroll-behavior: contain;
+  }
+
+  /* Close button command */
+  [command="close"] {
+    border: none;
+    cursor: pointer;
+  }
+
+  /* Popover invoker pattern */
+  [interestfor] {
+    cursor: pointer;
+  }
+
+  [popover] {
+    position: absolute;
+    position-area: top center;
+    inset: auto;
+    margin: 0;
+  }
+}

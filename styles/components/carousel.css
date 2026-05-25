@@ -1,0 +1,183 @@
+.carousel {
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: min(24rem, 18.125rem);
+	grid-template-rows: 1fr;
+	gap: var(--spacing-xl);
+
+	overflow-x: auto;
+	overscroll-behavior-x: contain;
+	scroll-snap-type: x mandatory;
+	scrollbar-width: none;
+
+	@media (width < 48em) {
+		gap: var(--spacing-lg);
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		scroll-behavior: smooth;
+	}
+
+	.carousel__slide {
+		width: 100%;
+		scroll-snap-align: center;
+		/* оголошуємо елемент scroll-state контейнером. Це означає: "цей елемент може повідомляти своїм нащадкам про свій поточний стан у scroll-контейнері". */
+		container-type: scroll-state;
+		aspect-ratio: 384 / 480;
+
+		@media (width > 48em) {
+			&:nth-child(even) .carousel__image {
+				margin-top: 96px;
+				/* transition: margin-top 0.4s ease; */
+			}
+		}
+
+		/* &:first-child,
+		&:last-child {
+			position: relative;
+			@media (width < 1230px) {
+				&::before,
+				&::after {
+					content: "";
+					position: absolute;
+					inset: 0;
+					width: 15px;
+					background-color: var(--surface-primary);
+				}
+			}
+		}
+		&:first-child {
+			@media (width < 1230px) {
+				&::before {
+					left: 0px;
+				}
+			}
+		}
+		&:last-child {
+			@media (width < 1230px) {
+				&::after {
+					left: 100%;
+				}
+			}
+		} */
+
+		.carousel__image {
+			> img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		@container scroll-state(snapped: inline) {
+			/* 
+      стилі всередині застосовуються лише тоді, коли контейнер 
+      (.carousel-slide) зараз є активним snap-елементом по 
+      горизонтальній осі (inline). 
+
+      - snapped: inline - слайд зафіксований по горизонталі
+      - snapped: blockслайд зафіксований по вертикалі
+      - snapped: noneслайд НЕ зафіксований
+      */
+			/* тут можна додати стилі для зафіксованого слайда */
+		}
+	}
+
+	&::scroll-button(right),
+	&::scroll-button(left) {
+		content: "";
+		position: absolute;
+		position-anchor: --carousel;
+
+		cursor: pointer;
+		width: 3rem;
+		aspect-ratio: 1;
+		border-radius: 50%;
+		margin-block-end: 5px;
+		border: 2px solid var(--border-color);
+		background: url(../../assets/img/chevron.svg) center/40% no-repeat;
+
+		transition:
+			rotate var(--motion-duration-slow),
+			border-color var(--motion-duration-slow);
+
+		@media (width < 48em) {
+			width: 2.5rem;
+		}
+	}
+
+	&::scroll-button(*):not(:disabled):hover {
+		border-color: var(--accent-primary);
+		rotate: 360deg;
+	}
+
+	&::scroll-button(*):disabled {
+		opacity: 0.5;
+		cursor: default;
+	}
+
+	&::scroll-button(left) {
+		position-area: bottom right;
+		translate: calc(-100% - 20px) 0;
+	}
+
+	&::scroll-button(right) {
+		transform: rotate(180deg);
+		margin-inline-end: 15px;
+		position-area: bottom right;
+	}
+}
+
+/* Маркери прокрутки */
+/* .carousel {
+	scroll-marker-group: after;
+
+	&::scroll-marker-group {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 2rem;
+		scroll-padding: 2rem;
+		margin-inline: 1.8rem;
+
+		overflow-x: auto;
+		overflow-y: hidden;
+		overscroll-behavior-x: contain;
+		scrollbar-width: none;
+		scroll-snap-type: x mandatory;
+		scrollbar-width: none;
+
+		@media (prefers-reduced-motion: no-preference) {
+			scroll-behavior: smooth;
+		}
+	}
+
+	.carousel__slide {
+		&::scroll-marker {
+			content: "" / "Scroll to this item";
+
+			border: 1px solid CanvasText;
+			border-radius: 50%;
+			outline-offset: 3px;
+			width: 2rem;
+			aspect-ratio: 1;
+			flex-shrink: 0;
+			-webkit-tap-highlight-color: transparent;
+			scroll-snap-align: center;
+
+			transition:
+				border-color 0.3s,
+				background-color 0.3s;
+		}
+
+		&::scroll-marker:is(:hover, :focus-visible) {
+			border-color: LinkText;
+		}
+
+		&::scroll-marker:target-current {
+			border-color: LinkText;
+			background-color: LinkText;
+		}
+	}
+} */

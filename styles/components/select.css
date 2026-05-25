@@ -1,0 +1,27 @@
+/**
+ * Customizable Select - Functional Structure
+ * 
+ * Demonstrates the base-select appearance for native select customization.
+ * This is the mechanism layer - how customizable selects work.
+ */
+@layer structure {
+  select {
+    /* Opt-in to customizable select styling */
+    appearance: base-select;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+
+  ::picker(select) {
+    /* Opt-in for the dropdown picker */
+    appearance: base-select;
+    position-area: block-end span-inline-end;
+  }
+
+  :where(option, selectedcontent) {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+}

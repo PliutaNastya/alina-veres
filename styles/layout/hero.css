@@ -1,10 +1,10 @@
 .hero {
-	min-height: 100svh;
+	/* min-height: 100svh; */
 	display: grid;
+	padding-block-start:  120px;
 }
 .hero__container {
 	container-type: inline-size;
-	padding-block-start: clamp(71px, 80vw, 140px);
 	min-height: 100%;
 	display: flex;
 	flex-direction: column;
@@ -24,7 +24,7 @@
 .hero__title {
 	text-transform: uppercase;
 	font-family: var(--font-family-serif);
-	font-size: max(85px, 18cqw);
+	font-size: max(80px, 18cqw);
 	line-height: 0.7;
 	text-align: center;
 
@@ -68,14 +68,5 @@
 		height: 5ch;
 		background: linear-gradient(to bottom, var(--text-primary), transparent);
 		animation: scroll 3s infinite linear;
-	}
-}
-
-@keyframes scroll {
-	0%, 100% {
-		background: linear-gradient(to bottom, var(--text-primary), transparent);
-	}
-	50% {
-		background: linear-gradient(to bottom, transparent, var(--text-primary));
 	}
 }
