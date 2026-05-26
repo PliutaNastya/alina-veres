@@ -10,6 +10,7 @@
 @import "layout/hero.css";
 @import "layout/work.css";
 @import "layout/quote.css";
+@import "layout/process.css";
 @import "components/heading-block.css";
 @import "components/carousel.css";
 
@@ -31,6 +32,7 @@ body {
 	overflow: clip;
 }
 section {
+	scroll-margin-top: clamp(75px, 100vw, 125px);
 	padding-block: var(--spacing-lg);
 	min-height: 100svh;
 }
