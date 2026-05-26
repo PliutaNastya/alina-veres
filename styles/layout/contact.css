@@ -1,6 +1,5 @@
 .contact {
-}
-.contact__container {
+	align-content: center;
 }
 .contact__heading {
 	&:not(:last-child) {
@@ -10,10 +9,6 @@
 			margin-block-end: var(--spacing-lg);
 		}
 	}
-}
-.heading-block__label {
-}
-.heading-block__title {
 }
 .contact__form {
 	max-width: 800px;
