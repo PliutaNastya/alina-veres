@@ -1,0 +1,29 @@
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.3rem;
+	border-radius: 100vw;
+	color: var(--button-text);
+	padding: var(--spacing-lg) calc(var(--spacing-lg) * 2);
+	background-color: var(--button-bg);
+	transition: background-color var(--motion-duration-slow);
+
+	svg {
+		width: 14px;
+		height: 14px;
+		margin-inline-start: var(--spacing-sm);
+		rotate: 180deg;
+		transition: rotate var(--motion-duration-slow);
+	}
+
+	&:hover {
+		background-color: var(--button-hover-bg);
+
+		svg {
+			rotate: 225deg;
+		}
+	}
+}

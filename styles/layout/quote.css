@@ -1,8 +1,6 @@
 .quote {
 	display: grid;
 	place-content: center;
-
-	background: repeating-conic-gradient(var(--gradient-color-primary) 0 12.5%, var(--gradient-color-secondary) 0 25%) 0 / 500px 500px;
 }
 .quote__container {
 	display: grid;

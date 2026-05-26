@@ -4,24 +4,101 @@
  * Demonstrates the base-select appearance for native select customization.
  * This is the mechanism layer - how customizable selects work.
  */
-@layer structure {
-  select {
-    /* Opt-in to customizable select styling */
-    appearance: base-select;
-    display: inline-flex;
-    align-items: center;
-    gap: var(--spacing-sm);
-  }
 
-  ::picker(select) {
-    /* Opt-in for the dropdown picker */
-    appearance: base-select;
-    position-area: block-end span-inline-end;
-  }
+select {
+	border-radius: 0;
+	/* Opt-in to customizable select styling */
+	appearance: base-select;
 
-  :where(option, selectedcontent) {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm);
-  }
+	&::picker-icon {
+		/* Custom styling for the dropdown icon */
+		display: none; /* Hide default icon */
+	}
+
+	button {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		padding: var(--spacing-sm);
+
+		/* background: white; */
+		border: 1px solid transparent;
+		transition: border 0.3s ease;
+	}
+
+	&:open button {
+		color: var(--accent-secondary);
+	}
+
+	& ::selectedcontent {
+		/* Style for the selected option display */
+		display: flex;
+		align-items: center;
+		gap: var(--spacing-sm);
+	}
+	&:open .arrow {
+		transform: rotate(135deg);
+	}
+
+	option {
+		padding-block: var(--spacing-md);
+		&::checkmark {
+			display: none;
+		}
+
+		&:hover:not(:disabled) {
+			background-color: var(--surface-hover);
+		}
+	}
+}
+
+::picker(select) {
+	/* Opt-in for the dropdown picker */
+	appearance: base-select;
+
+	opacity: 0;
+	display: none;
+	transform: translateY(-8px);
+
+	margin-block: var(--spacing-md);
+	padding: var(--spacing-md);
+	border: none;
+	background-color: var(--surface-raised);
+
+	transition:
+		opacity var(--motion-duration-slow) ease,
+		transform var(--motion-duration-slow) ease,
+		display var(--motion-duration-slow) allow-discrete,
+		overlay var(--motion-duration-slow) allow-discrete;
+
+	transition-behavior: allow-discrete;
+}
+
+select:open::picker(select) {
+	display: block;
+	opacity: 1;
+	transform: translateY(0);
+}
+
+@starting-style {
+	select:open::picker(select) {
+		opacity: 0;
+		transform: translateY(-8px);
+	}
+}
+
+:where(option, selectedcontent) {
+	display: flex;
+	align-items: center;
+	gap: var(--spacing-sm);
+}
+
+.arrow {
+	width: 10px;
+	height: 10px;
+	border-left: 0.125rem solid var(--text-primary);
+	border-bottom: 0.125rem solid var(--text-primary);
+	transform: rotate(-45deg);
+	transition: transform var(--motion-duration-slow) ease;
 }

@@ -59,8 +59,8 @@ html {
 
 	/* Focus */
 	--outline-color: light-dark(#6b8e5a, #e8d5b7);
-	--outline-width: 3px;
-	--outline-offset: 2px;
+	--outline-width: 1px;
+	--outline-offset: 0px;
 
 	/* Gradient */
 	--gradient-primary: linear-gradient(135deg, #e8d5b7, #8b7355);

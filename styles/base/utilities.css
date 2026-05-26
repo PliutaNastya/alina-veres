@@ -16,7 +16,9 @@
 	margin-inline: auto;
 	padding-inline: 0.9375rem;
 }
-
+[class*="--gradient-bg"] {
+	background: repeating-conic-gradient(var(--gradient-color-primary) 0 12.5%, var(--gradient-color-secondary) 0 25%) 0 / 500px 500px;
+}
 /* .overflow-scroller {
     grid-column: full-width;
     overflow-x: auto;
@@ -32,4 +34,3 @@
 .overflow-scroller>* {
     scroll-snap-align: center
 } */
-
