@@ -1,0 +1,48 @@
+.portfolio {
+	.heading-block {
+		&:not(:last-child) {
+			margin-block-end: calc(var(--spacing-lg) * 3);
+
+			@media (width < 48rem) {
+				margin-block-end: var(--spacing-xl);
+			}
+		}
+}
+	.works-list {
+		display: grid-lanes;
+		grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+		item-flow: collapse;
+		gap: 1rem;
+
+		img {
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+		}
+
+		a {
+			position: relative;
+		}
+
+		a::after {
+			content: "";
+			display: block;
+			opacity: 0;
+			position: absolute;
+			inset: 0;
+			background-color: var(--surface-overlay);
+			transition:
+				opacity var(--motion-duration-slow),
+				backdrop-filter var(--motion-duration-slow);
+		}
+
+		&:hover a::after {
+			opacity: 1;
+			backdrop-filter: blur(1px);
+		}
+
+		&:hover a:hover::after {
+			opacity: 0;
+		}
+	}
+}

@@ -1,0 +1,63 @@
+
+
+/* Прибираємо стандартний маркер (трикутник/стрілочку) у тега <summary> */
+summary::marker {
+  content: none;
+}
+/* Стилі для блоку <details> */
+details {
+  /* Обрізаємо вміст, що виходить за межі блоку */
+  overflow: hidden;
+
+}
+/* Стилі для заголовка акордеону - тега <summary> */
+summary {
+  /* Маркер списку виноситься за межі блоку контенту , щоб прихований вміст було вирівняно разом з заголовком */
+  list-style-position: outside;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Стилі для іконки */
+/* Горизонтальна лінія (перша частина іконки "плюс/мінус") */
+details summary::before,
+details summary::after {
+  content: "";
+  inline-size: 0.9375rem;
+  block-size: 0.0938rem;
+  background-color: var(--text-primary);
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-end: 0;
+  transform: translateY(-50%);
+  transition: transform var(--motion-duration-slow) ease;
+}
+/* Вертикальна лінія (друга частина іконки "плюс") - повернута на 90° */
+details summary::after {
+  transform: translateY(-50%) rotate(90deg);
+}
+/* Коли <details> відкритий - вертикальна лінія повертається в горизонтальне положення, утворюючи "−" */
+details[open] summary::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+/* 
+	details::details-content - внутрішній контейнер браузера для анімації розкриття.
+	УВАГА: сюди не варто додавати margin/padding, бо вони зламають анімацію висоти.
+	Відступи треба додавати до реального контенту всередині <details>.
+*/
+details::details-content {
+  /* Початкова висота 0 (закрито) */
+  block-size: 0;
+  transition:
+	/* Анімація висоти 0.7 секунди - анімація при відкритті */ block-size
+      var(--motion-duration-slow),
+    /* Анімація видимості контенту - анімація при закритті */ content-visibility
+      var(--motion-duration-slow);
+  /* Дозволяє анімувати дискретні властивості, такі як content-visibility */
+  transition-behavior: allow-discrete;
+}
+/* Коли <details> відкритий - висота = розміру контенту */
+details[open]::details-content {
+  block-size: auto;
+}
+

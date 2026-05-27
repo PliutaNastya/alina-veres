@@ -12,10 +12,13 @@
 @import "layout/quote.css";
 @import "layout/process.css";
 @import "layout/contact.css";
+@import "layout/faqs.css";
 @import "components/heading-block.css";
 @import "components/carousel.css";
 @import "components/button.css";
 @import "components/select.css";
+@import "components/faqs.css";
+@import "pages/work.css";
 
 body {
 	background-color: var(--surface-primary);
@@ -35,8 +38,8 @@ body {
 	overflow: clip;
 }
 section {
-	scroll-margin-top: clamp(75px, 100vw, 125px);
-	padding-block: var(--spacing-lg);
+	scroll-margin-top: 4.4375rem;
+	padding-block: var(--spacing-xl);
 	min-height: 100svh;
 }
 

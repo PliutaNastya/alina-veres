@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto%20Serif:wght@400;500;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles/main.css">
+	<title>Document</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="#" aria-label="Logotype" class="header__logo"> Alina <span>.</span>
+				</a>
+				<nav class="header__nav">
+					<ul class="header__menu menu">
+						<li class="menu__item">
+							<a href="index.html" class="menu__link">Home</a>
+						</li>
+						<li class="menu__item">
+							<a href="index.html#work" class="menu__link">Work</a>
+						</li>
+						<li class="menu__item">
+							<a href="index.html#process" class="menu__link">Process</a>
+						</li>
+						<li class="menu__item">
+							<a href="index.html#faqs" class="menu__link">FAQs</a>
+						</li>
+						<li class="menu__item">
+							<a href="index.html#contact" class="menu__link">Contact</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="header__actions actions-header">
+					<div class="actions-header__toggle-theme theme-toggle">
+						<label tabindex="0" aria-label="Toggle Light Theme">
+							<input class="sr-only" name="color-scheme" value="light" type="radio">
+							<svg>
+								<use xlink:href="assets/svg-sprite.svg#sun"></use>
+							</svg>
+						</label>
+						<label tabindex="0" aria-label="Toggle Dark Theme">
+							<input class="sr-only" name="color-scheme" value="dark" type="radio">
+							<svg>
+								<use xlink:href="assets/svg-sprite.svg#moon"></use>
+							</svg>
+						</label>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section class="hero">
+				<div class="hero__container">
+					<div class="hero__body">
+						<h1 class="hero__title">Alina <span>Veres</span></h1>
+						<p class="hero__subtitle">Portfolio</p>
+					</div>
+					<a href="#portfolio" class="hero__scroll-link">Scroll to explore</a>
+				</div>
+			</section>
+			<section class="portfolio" id="portfolio">
+				<div class="portfolio__container">
+					<div class="heading-block">
+						<h2 class="heading-block__title">Portfolio</h2>
+						<p class="heading-block__subtitle">A selection of Alina Veres' recent work</p>
+					</div>
+					<ul class="works-list">
+						<li>
+							<a href="#">
+								<img src="assets/img/work/01.jpg" alt="Project 1">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="assets/img/work/04.jpg" alt="Project 1">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="assets/img/work/05.jpg" alt="Project 1">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="assets/img/work/02.jpg" alt="Project 1">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="assets/img/work/06.jpg" alt="Project 1">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="assets/img/work/07.jpg" alt="Project 1">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="assets/img/work/03.jpg" alt="Project 1">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="assets/img/work/08.jpg" alt="Project 1">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="assets/img/work/09.jpg" alt="Project 1">
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+	</div>
+</body>
+
+</html>

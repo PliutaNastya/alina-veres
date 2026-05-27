@@ -30,6 +30,9 @@
 							<a href="#process" class="menu__link">Process</a>
 						</li>
 						<li class="menu__item">
+							<a href="#faqs" class="menu__link">FAQs</a>
+						</li>
+						<li class="menu__item">
 							<a href="#contact" class="menu__link">Contact</a>
 						</li>
 					</ul>
@@ -116,6 +119,10 @@
 						</div>
 					</li>
 				</ul>
+				<a href="work.html" class="work__link button"> View more <svg>
+						<use class="icon" xlink:href="assets/svg-sprite.svg#chevron"></use>
+					</svg>
+				</a>
 			</section>
 			<section class="quote quote--gradient-bg">
 				<div class="quote__container">
@@ -204,6 +211,53 @@
 					</ul>
 				</div>
 			</section>
+			<section id="faqs" class="faqs">
+				<div class="faqs__container">
+					<div class="heading-block">
+						<div class="heading-block__label">Popular questions and answers</div>
+						<h2 class="heading-block__title">FAQS</h2>
+					</div>
+					<div class="faqs__body">
+						<details name="faq" open class="faq">
+							<summary class="faq__summary">How does it work?</summary>
+							<div class="faq__content">
+								<p>You message Alina directly through the contact form.</p>
+								<p>She will respond to your message within 24-48 hours.</p>
+							</div>
+						</details>
+						<details name="faq" open class="faq">
+							<summary class="faq__summary">What is your availability for commissions?</summary>
+							<div class="faq__content">
+								<p>Alina's availability for commissions varies based on her current schedule and project commitments. Please reach out through the contact form to discuss potential opportunities and timelines.</p>
+							</div>
+						</details>
+						<details name="faq" open class="faq">
+							<summary class="faq__summary">What is your return policy?</summary>
+							<div class="faq__content">
+								<p>Due to the nature of handmade ceramic pieces, all sales are final. Please ensure you are satisfied with the piece before making a purchase.</p>
+							</div>
+						</details>
+						<details name="faq" open class="faq">
+							<summary class="faq__summary">How do I care for my ceramic piece?</summary>
+							<div class="faq__content">
+								<p>Handmade ceramic pieces should be handled with care. Avoid exposing them to extreme temperatures or direct sunlight. Clean them gently with a soft, dry cloth.</p>
+							</div>
+						</details>
+						<details name="faq" open class="faq">
+							<summary class="faq__summary">What is your shipping policy?</summary>
+							<div class="faq__content">
+								<p>Shipping costs and delivery times may vary based on your location and the size of your order. Please contact us for more information.</p>
+							</div>
+						</details>
+						<details name="faq" open class="faq">
+							<summary class="faq__summary">Which pieces are available for purchase?</summary>
+							<div class="faq__content">
+								<p>We have a variety of handmade ceramic pieces available for purchase at any given time. Please check back regularly as new pieces are added.</p>
+							</div>
+						</details>
+					</div>
+				</div>
+			</section>
 			<section id="contact" class="contact contact--gradient-bg">
 				<div class="contact__container">
 					<div class="contact__heading heading-block heading-block--center">
@@ -224,12 +278,10 @@
 						</div>
 						<div class="form__group">
 							<select id="subject" placeholder=" " name="subject" class="form__select form-item" required>
-
 								<button>
 									<selectedcontent></selectedcontent>
 									<span class="arrow"></span>
 								</button>
-
 								<option value="" disabled selected hidden>Select a subject</option>
 								<option value="inquiry">General Inquiry</option>
 								<option value="collaboration">Collaboration Opportunity</option>
@@ -242,9 +294,7 @@
 							<textarea id="message" name="message" class="form__textarea form-item" rows="5" placeholder=" " required></textarea>
 							<label for="message" class="form__label"><span>YOUR MESSAGE</span></label>
 						</div>
-						<button type="submit" class="form__submit button">
-							Send Message
-							<svg>
+						<button type="submit" class="form__submit button"> Send Message <svg>
 								<use class="icon" xlink:href="assets/svg-sprite.svg#chevron"></use>
 							</svg>
 						</button>

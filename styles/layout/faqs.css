@@ -1,0 +1,47 @@
+.faqs {
+	align-content: center;
+	& .heading-block {
+		&:not(:last-child) {
+			margin-block-end: calc(var(--spacing-lg) * 3);
+
+			@media (width < 48rem) {
+				margin-block-end: var(--spacing-lg);
+			}
+		}
+	}
+}
+
+.faq__content {
+	line-height: var(--line-height-normal);
+
+	p:not(:last-child) {
+		margin-block-end: var(--spacing-md);
+	}
+}
+
+.faqs__container {
+}
+
+.heading-block__label {
+}
+.heading-block__title {
+}
+.faqs__body {
+}
+.faq {
+	border-block-start: var(--border-width) solid var(--border-color);
+	&:last-child {
+		border-block-end: var(--border-width) solid var(--border-color);
+	}
+}
+.faq__summary {
+	padding-block: var(--spacing-xl);
+	font-weight: 700;
+	padding-inline-end: var(--spacing-xl);
+
+	& + * {
+		padding-block-end: var(--spacing-lg);
+	}
+}
+.faq__content {
+}

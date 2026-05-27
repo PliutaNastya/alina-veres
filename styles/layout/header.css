@@ -105,7 +105,7 @@
 
 	transition: color 0.3s ease;
 
-	@media (width < 40.625em) {
+	@media (width < 48em) {
 		padding: 0.3125rem 0.5rem;
 		font-size: var(--text-sm);
 	}

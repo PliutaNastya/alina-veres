@@ -11,4 +11,20 @@
 			margin-bottom: calc(var(--spacing-lg) * 2);
 		}
 	}
+
+	.work__carousel {
+		&:not(:last-child) {
+			margin-bottom: calc(var(--spacing-lg) * 2);
+		}
+	}
+
+	.work__link {
+		margin-inline: auto;
+		width: fit-content;
+
+		@media (width < 48rem) {
+			width: calc(100% - 30px);
+			margin-inline: 15px;
+		}
+	}
 }
