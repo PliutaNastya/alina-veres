@@ -19,6 +19,25 @@
 [class*="--gradient-bg"] {
 	background: repeating-conic-gradient(var(--gradient-color-primary) 0 12.5%, var(--gradient-color-secondary) 0 25%) 0 / 500px 500px;
 }
+
+/* Глобальний фейд між сторінками */
+@view-transition {
+  navigation: auto;
+}
+
+/* ::view-transition-group(page) {
+  overflow: hidden;
+  animation-duration: 0.4s;
+  backface-visibility: hidden;
+}
+::view-transition-old(page) {
+ animation-name: slide-out-to-left;
+}
+
+::view-transition-new(page) {
+  animation-name: slide-in-from-right;
+} */
+
 /* .overflow-scroller {
     grid-column: full-width;
     overflow-x: auto;
@@ -34,3 +53,14 @@
 .overflow-scroller>* {
     scroll-snap-align: center
 } */
+
+
+.anim {
+	--i: 0;
+	animation: fade-in-text 0.8s ease both;
+	trigger-scope: --self;
+	animation-trigger: --self play-forwards;
+	animation-delay: calc(var(--i) * 0.1s);
+
+	timeline-trigger: --self view() entry 20% exit 100%; /* this is the the text */
+}

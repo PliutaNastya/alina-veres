@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto%20Serif:wght@400;500;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles/main.css">
+	<title>Document</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="#" aria-label="Logotype" class="header__logo"> Alina <span>.</span>
+				</a>
+				<nav class="header__nav">
+					<ul class="header__menu menu">
+						<li class="menu__item">
+							<a href="#" class="menu__link">Home</a>
+						</li>
+						<li class="menu__item">
+							<a href="#work" class="menu__link">Work</a>
+						</li>
+						<li class="menu__item">
+							<a href="#process" class="menu__link">Process</a>
+						</li>
+						<li class="menu__item">
+							<a href="#faqs" class="menu__link">FAQs</a>
+						</li>
+						<li class="menu__item">
+							<a href="#contact" class="menu__link">Contact</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="header__actions actions-header">
+					<div class="actions-header__toggle-theme theme-toggle">
+						<label tabindex="0" aria-label="Toggle Light Theme">
+							<input class="sr-only" name="color-scheme" value="light" type="radio">
+							<svg>
+								<use xlink:href="assets/svg-sprite.svg#sun"></use>
+							</svg>
+						</label>
+						<label tabindex="0" aria-label="Toggle Dark Theme">
+							<input class="sr-only" name="color-scheme" value="dark" type="radio">
+							<svg>
+								<use xlink:href="assets/svg-sprite.svg#moon"></use>
+							</svg>
+						</label>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section class="hero">
+				<div class="hero__container">
+					<div class="hero__body anim">
+						<h1 class="hero__title">Thank <span>you!</span></h1>
+					</div>
+					<a href="index.html" class="hero__button button anim">Back to home</a>
+				</div>
+			</section>
+		</main>
+	</div>
+</body>
+
+</html>

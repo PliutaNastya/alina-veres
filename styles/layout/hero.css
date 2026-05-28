@@ -1,14 +1,13 @@
 .hero {
-	/* min-height: 100svh; */
 	display: grid;
-	padding-block-start:  120px;
+	padding-block-start:  8.125rem;
 }
 .hero__container {
 	container-type: inline-size;
 	min-height: 100%;
 	display: flex;
 	flex-direction: column;
-	padding-block-end: var(--spacing-lg);
+	/* padding-block-end: var(--spacing-lg); */
 }
 .hero__body {
 	flex-grow: 1;

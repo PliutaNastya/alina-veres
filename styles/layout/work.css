@@ -8,13 +8,13 @@
 		}
 
 		&:not(:last-child) {
-			margin-bottom: calc(var(--spacing-lg) * 2);
+			margin-bottom: calc(var(--spacing-lg) * 3);
 		}
 	}
 
 	.work__carousel {
 		&:not(:last-child) {
-			margin-bottom: calc(var(--spacing-lg) * 2);
+			margin-bottom: calc(var(--spacing-lg) * 3);
 		}
 	}
 

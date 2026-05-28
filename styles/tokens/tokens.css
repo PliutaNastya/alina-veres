@@ -1,7 +1,9 @@
 html {
+	scrollbar-gutter: stable;
 	container-type: scroll-state;
 }
 :root {
+	view-transition-name: none;
 	scroll-behavior: smooth;
 	interpolate-size: allow-keywords;
 

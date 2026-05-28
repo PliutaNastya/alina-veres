@@ -33,3 +33,60 @@
 		background: linear-gradient(to bottom, transparent, var(--text-primary));
 	}
 }
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes slide-out-to-left {
+  from {
+    right: 0%;
+  }
+  to {
+    right: 100%;
+  }
+}
+@keyframes slide-in-from-right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+
+@keyframes slide-out-left {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+  }
+}
+
+
+ @keyframes fade-in-text {
+    from { opacity: 0.2; transform: translateY(20px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes to-diamond {
+    to {
+      background-color: var(--accent-primary);
+      border-radius: 0;
+      transform: rotate(45deg) scale(1.2);
+      width: 12px;
+		height:12px;
+    }
+  }

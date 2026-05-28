@@ -48,6 +48,17 @@
 	}
 
 	&::before {
+		animation: 
+    /* to-circle 0.6s cubic-bezier(0.25, 1, 0.5, 1) both; */ to-diamond 0.6s cubic-bezier(0.25, 1, 0.5, 1) both;
+		/* to-expansion 0.6s cubic-bezier(0.25, 1, 0.5, 1) both, */
+		/* to-dot 0.6s cubic-bezier(0.25, 1, 0.5, 1) both; */
+
+		/* connecting the triggers */
+		animation-trigger: --step play-forwards play-backwards;
+		/* --step-2 play-forwards play-backwards,
+    --step-3 play-forwards play-backwards,
+    --step-4 play-forwards play-backwards; */
+
 		content: "";
 		position: absolute;
 		top: 50%;
@@ -55,6 +66,7 @@
 		translate: -50% -50%;
 		width: 10px;
 		height: 10px;
+		z-index: 2;
 		border-radius: var(--radius-round);
 		background-color: var(--text-muted);
 
@@ -75,6 +87,10 @@
 		}
 	}
 }
+[data-step] {
+	timeline-trigger: --step view() entry 50% exit 200%; /* this is for the visual */
+}
+
 .steps-process__content {
 	align-self: center;
 	width: 100%;

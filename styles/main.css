@@ -21,6 +21,7 @@
 @import "pages/work.css";
 
 body {
+	 view-transition-name: page;
 	background-color: var(--surface-primary);
 	color: var(--text-primary);
 	line-height: var(--line-height-tight);
